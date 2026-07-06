@@ -468,34 +468,101 @@ function irA(id){
     });
 }
 
+<script>
+
 /* BUSCADOR */
 
 function buscarContenido(){
 
-let input = document.getElementById("searchInput").value.toLowerCase();
+let input = document
+.getElementById("searchInput")
+.value
+.toLowerCase();
 
-if(input.includes("nanno")){
-    location.href="#bots";
+/* BOTS */
+
+if(
+input.includes("nanno") ||
+input.includes("tae") ||
+input.includes("bot")
+){
+
+window.location.href = "bots.html";
+
 }
 
-else if(input.includes("tae")){
-    location.href="#bots";
+/* CHAT */
+
+else if(
+input.includes("chat") ||
+input.includes("ia") ||
+input.includes("mensaje")
+){
+
+window.location.href = "chat.html";
+
 }
 
-else if(input.includes("dibujo")){
-    location.href="#galeria";
+/* MUSICA */
+
+else if(
+input.includes("musica") ||
+input.includes("playlist") ||
+input.includes("cancion")
+){
+
+window.location.href = "music.html";
+
 }
 
-else if(input.includes("musica")){
-    location.href="#musica";
+/* GALERIA */
+
+else if(
+input.includes("galeria") ||
+input.includes("dibujo") ||
+input.includes("arte")
+){
+
+window.location.href = "gallery.html";
+
 }
 
-else if(input.includes("blog")){
-    location.href="#blog";
+/* BLOG */
+
+else if(
+input.includes("blog") ||
+input.includes("post")
+){
+
+document.getElementById("blog")
+.scrollIntoView({
+behavior:"smooth"
+});
+
 }
+
+/* SOBRE MI */
+
+else if(
+input.includes("sobre") ||
+input.includes("perfil")
+){
+
+document.getElementById("sobremi")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+/* ERROR */
 
 else{
-    alert("No encontré eso. El buscador hizo lo que pudo. Trágicamente.");
+
+alert(
+"No encontré eso. El buscador decidió rendirse."
+);
+
 }
 
 }
