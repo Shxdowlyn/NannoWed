@@ -1,573 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nanno & Tae</title>
-
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    background:linear-gradient(to bottom,#edf6ff,#d9ecff);
-    font-family:"Trebuchet MS",sans-serif;
-    color:#35506b;
-    padding:25px;
-}
-
-/* CONTENEDOR */
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    background:white;
-    border:4px solid #abd4ff;
-    border-radius:30px;
-    padding:20px;
-    box-shadow:0 0 25px rgba(110,160,255,0.2);
-}
-
-/* BARRA SUPERIOR */
-
-.topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border:3px solid #b8dbff;
-    border-radius:40px;
-    padding:12px 20px;
-    margin-bottom:25px;
-    background:#f8fbff;
-}
-
-.search-box{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    width:100%;
-}
-
-.search-box input{
-    width:100%;
-    border:none;
-    background:none;
-    outline:none;
-    font-size:17px;
-    color:#5482aa;
-}
-
-.search-box button{
-    border:none;
-    background:#b6d9ff;
-    color:white;
-    padding:8px 15px;
-    border-radius:15px;
-    cursor:pointer;
-}
-
-.search-box button:hover{
-    background:#89c0ff;
-}
-
-/* PERFIL */
-
-.profile{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.card{
-    background:#f8fbff;
-    border:3px solid #c7e3ff;
-    border-radius:25px;
-    padding:18px;
-}
-
-.title{
-    font-size:55px;
-    line-height:55px;
-    color:#70a8e8;
-    font-weight:bold;
-}
-
-.subtitle{
-    margin-top:15px;
-    font-size:18px;
-}
-
-<!-- BOTONES -->
-
-<div class="menu">
-
-<a href="#sobremi">
-<button>👤 Sobre mí</button>
-</a>
-
-<a href="bots.html">
-<button>🤖 Mis Bots</button>
-</a>
-
-<a href="gallery.html">
-<button>🖼️ Galería</button>
-</a>
-
-<a href="music.html">
-<button>🎧 Música</button>
-</a>
-
-<a href="chat.html">
-<button>💬 Chat IA</button>
-</a>
-
-<a href="#blog">
-<button>📝 Blog</button>
-</a>
-
-</div>
-
-/* IMAGEN */
-
-.profile img{
-    width:100%;
-    border-radius:20px;
-}
-
-/* SECCIONES */
-
-.section{
-    margin-top:25px;
-}
-
-.section-title{
-    background:#abd4ff;
-    color:white;
-    padding:12px;
-    border-radius:12px;
-    margin-bottom:12px;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-ul{
-    list-style:none;
-}
-
-li{
-    padding:10px;
-    border-bottom:1px solid #dceeff;
-}
-
-/* BLOG */
-
-.blog-post{
-    margin-top:15px;
-    background:#f4faff;
-    border:2px solid #d6ebff;
-    border-radius:18px;
-    padding:18px;
-}
-
-.blog-post h3{
-    color:#4d82b6;
-    margin-bottom:10px;
-}
-
-/* TARJETAS */
-
-.info-box{
-    background:#f3f9ff;
-    border:2px solid #d7ebff;
-    padding:15px;
-    border-radius:18px;
-    margin-top:15px;
-}
-
-/* FOOTER */
-
-.footer{
-    text-align:center;
-    margin-top:35px;
-    color:#7697b8;
-    font-size:14px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:850px){
-
-.profile{
-    grid-template-columns:1fr;
-}
-
-.grid{
-    grid-template-columns:1fr;
-}
-
-.title{
-    font-size:40px;
-    line-height:40px;
-}
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#eef8ff;padding:20px;color:#446}
+.container{max-width:900px;margin:auto;background:#fff;border:3px solid #b9d8ff;border-radius:24px;padding:18px}
+.topbar{border:2px solid #b9d8ff;border-radius:30px;padding:10px 15px;margin-bottom:20px}
+.topbar input{width:100%;border:none;outline:none;background:none;font-size:16px}
+.profile{display:grid;grid-template-columns:320px 1fr;gap:20px}
+.card{border:2px solid #cfe5ff;background:#f8fcff;border-radius:20px;padding:16px}
+.title{font-size:48px;color:#74a8df;font-weight:bold;line-height:1}
+.subtitle{margin:10px 0 20px}
+.menu a{display:block;text-decoration:none;margin:10px 0}
+.menu button{width:100%;padding:12px;border:none;border-radius:10px;background:#b7d8ff;cursor:pointer}
+.menu button:hover{background:#9ec9ff}
+img{width:100%;border-radius:15px}
+.info{margin-top:15px;padding:12px;border:2px solid #d8ebff;border-radius:12px;background:#fff}
+.footer{text-align:center;margin-top:20px;color:#789}
+@media(max-width:700px){.profile{grid-template-columns:1fr}.title{font-size:38px}}
 </style>
 </head>
-
 <body>
-
 <div class="container">
-
-<!-- BARRA -->
-
 <div class="topbar">
-
-<div class="search-box">
-
-<input 
-type="text" 
-id="searchInput" 
-placeholder="Buscar algo sobre Nanno, Tae, dibujos, música...">
-
-<button onclick="buscarContenido()">
-Buscar
-</button>
-
+<input id="searchInput" placeholder="🔍 Buscar...">
 </div>
-
-</div>
-
-<!-- PERFIL -->
 
 <div class="profile">
-
 <div class="card">
-
-<div class="title">
-NANNO<br>& TAE
-</div>
-
-<div class="subtitle">
-mini blog marina 🌊<br>
-bots • dibujos • caos digital
-</div>
-
-<button class="home-btn" onclick="irA('inicio')">
-HOME
-</button>
+<div class="title">NANNO<br>& TAE</div>
+<div class="subtitle">mini blog marina 🌊<br>bots • dibujos • caos digital</div>
 
 <div class="menu">
-
-<a href="#sobremi">
-<button>Sobre mí</button>
-</a>
-
-<a href="#bots">
-<button>Mis bots</button>
-</a>
-
-<a href="#galeria">
-<button>Galería</button>
-</a>
-
-<a href="#musica">
-<button>Música</button>
-</a>
-
+<a href="about.html"><button>👤 Sobre mí</button></a>
+<a href="bots.html"><button>🤖 Mis Bots</button></a>
+<a href="gallery.html"><button>🖼️ Galería</button></a>
+<a href="music.html"><button>🎵 Música</button></a>
+<a href="chat.html"><button>💬 Chat IA</button></a>
+<a href="blog.html"><button>📝 Blog</button></a>
 </div>
-
 </div>
 
 <div class="card">
-
 <img src="https://i.pinimg.com/736x/8a/55/89/8a5589c4b33eb0d5b87fbc3ea5f17c8c.jpg">
-
-<div class="info-box">
-
-<h3>Estado actual</h3>
-
-<p>
-☁️ Editando código hasta destruir la paciencia humana.<br><br>
-
-💬 Mejorando respuestas de Nanno y Tae.<br><br>
-
-🖌️ Practicando dibujos aunque los adultos crean que gastar hojas es un crimen federal.
-</p>
-
+<div class="info">
+<h3>Estado actual</h3><br>
+<p>☁️ Editando código.<br><br>💬 Mejorando Nanno y Tae.<br><br>🖌️ Practicando dibujo.</p>
 </div>
-
 </div>
-
 </div>
-
-<!-- SOBRE MI -->
-
-<div class="section" id="sobremi">
-
-<div class="section-title">
-Sobre mí
-</div>
-
-<div class="card">
-
-<p>
-Soy estudiante y estoy aprendiendo HTML, CSS y diseño aesthetic.
-Me gustan las páginas estilo viejo internet mezcladas con estética marina.
-También dibujo personajes, practico bocetos y hago bots para WhatsApp.
-Porque dormir correctamente claramente era demasiado sencillo para la especie humana.
-</p>
-
-</div>
-
-</div>
-
-<!-- BOTS -->
-
-<div class="section" id="bots">
-
-<div class="section-title">
-Mis bots
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Nanno</h3>
-
-<ul>
-<li>💬 Respuestas automáticas</li>
-<li>🌊 Estética azul marina</li>
-<li>🧠 Personalidad más humana</li>
-<li>📱 Sistema en desarrollo</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Tae</h3>
-
-<ul>
-<li>🎧 Frases y conversaciones</li>
-<li>🫧 Diseño cute</li>
-<li>⚡ Nuevas funciones</li>
-<li>🔧 Actualizaciones constantes</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- GALERIA -->
-
-<div class="section" id="galeria">
-
-<div class="section-title">
-Galería
-</div>
-
-<div class="grid">
-
-<div class="card">
-<img src="https://i.pinimg.com/736x/43/89/3d/43893d9e5d7f6c43cfe7c53d68fd0d67.jpg">
-</div>
-
-<div class="card">
-<img src="https://i.pinimg.com/736x/f7/f7/f9/f7f7f9c67d9b55b0e5f0f8b11d75d4dd.jpg">
-</div>
-
-</div>
-
-</div>
-
-<!-- MUSICA -->
-
-<div class="section" id="musica">
-
-<div class="section-title">
-Música
-</div>
-
-<div class="card">
-
-<ul>
-<li>🎧 Música tranquila para programar</li>
-<li>🌊 Playlists aesthetic marinas</li>
-<li>💙 Canciones para dibujar de madrugada</li>
-<li>☁️ Sonidos relajantes mientras el código explota</li>
-</ul>
-
-</div>
-
-</div>
-
-<!-- BLOG -->
-
-<div class="section" id="blog">
-
-<div class="section-title">
-Mini blog
-</div>
-
-<div class="blog-post">
-
-<h3>Primer post</h3>
-
-<p>
-Hoy seguí practicando HTML.
-Todavía no entiendo por qué una línea mal puesta destruye toda la página completa.
-El CSS tiene problemas de ira bastante serios.
-</p>
-
-</div>
-
-<div class="blog-post">
-
-<h3>Dibujos</h3>
-
-<p>
-Estoy intentando mejorar ojos, labios y perfiles.
-A veces salen bien.
-A veces parecen criaturas del abismo marino.
-Proceso artístico promedio.
-</p>
-
-</div>
-
-</div>
-
-<!-- FOOTER -->
 
 <div class="footer">
 made with sueño, música y código que funciona por milagro
 </div>
-
 </div>
 
 <script>
-
-function irA(id){
-    document.getElementById(id).scrollIntoView({
-        behavior:"smooth"
-    });
-}
-
-<script>
-
-/* BUSCADOR */
-
 function buscarContenido(){
-
-let input = document
-.getElementById("searchInput")
-.value
-.toLowerCase();
-
-/* BOTS */
-
-if(
-input.includes("nanno") ||
-input.includes("tae") ||
-input.includes("bot")
-){
-
-window.location.href = "bots.html";
-
+const t=document.getElementById("searchInput").value.toLowerCase();
+if(t.includes("bot"))location="bots.html";
+else if(t.includes("chat")||t.includes("ia"))location="chat.html";
+else if(t.includes("gal"))location="gallery.html";
+else if(t.includes("music")||t.includes("música"))location="music.html";
+else if(t.includes("blog"))location="blog.html";
+else if(t.includes("sobre"))location="about.html";
+else alert("No encontré resultados.");
 }
-
-/* CHAT */
-
-else if(
-input.includes("chat") ||
-input.includes("ia") ||
-input.includes("mensaje")
-){
-
-window.location.href = "chat.html";
-
-}
-
-/* MUSICA */
-
-else if(
-input.includes("musica") ||
-input.includes("playlist") ||
-input.includes("cancion")
-){
-
-window.location.href = "music.html";
-
-}
-
-/* GALERIA */
-
-else if(
-input.includes("galeria") ||
-input.includes("dibujo") ||
-input.includes("arte")
-){
-
-window.location.href = "gallery.html";
-
-}
-
-/* BLOG */
-
-else if(
-input.includes("blog") ||
-input.includes("post")
-){
-
-document.getElementById("blog")
-.scrollIntoView({
-behavior:"smooth"
+document.getElementById("searchInput").addEventListener("keydown",e=>{
+if(e.key==="Enter")buscarContenido();
 });
-
-}
-
-/* SOBRE MI */
-
-else if(
-input.includes("sobre") ||
-input.includes("perfil")
-){
-
-document.getElementById("sobremi")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-/* ERROR */
-
-else{
-
-alert(
-"No encontré eso. El buscador decidió rendirse."
-);
-
-}
-
-}
-
 </script>
-
 </body>
 </html>
