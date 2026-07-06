@@ -37,7 +37,6 @@ img{width:100%;border-radius:15px}
 <div class="menu">
 <a href="about.html"><button>👤 Sobre mí</button></a>
 <a href="bots.html"><button>🤖 Mis Bots</button></a>
-<a href="gallery.html"><button>🖼️ Galería</button></a>
 <a href="art.html"><button>🎨 Dibujos</button></a>
 <a href="chat.html"><button>💬 Chat IA</button></a>
 <a href="blog.html"><button>📝 Blog</button></a>
@@ -63,7 +62,6 @@ function buscarContenido(){
 const t=document.getElementById("searchInput").value.toLowerCase();
 if(t.includes("bot"))location="bots.html";
 else if(t.includes("chat")||t.includes("ia"))location="chat.html";
-else if(t.includes("gal"))location="gallery.html";
 else if(t.includes("pinturas")||t.includes("pinturas"))location="art.html";
 else if(t.includes("blog"))location="blog.html";
 else if(t.includes("sobre"))location="about.html";
