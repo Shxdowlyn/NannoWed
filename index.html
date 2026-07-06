@@ -1,29 +1,332 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi primera web</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nanno & Tae Blog</title>
+
   <style>
-    body {
-      background: linear-gradient(to right, #ff9a9e, #fad0c4);
-      font-family: Arial;
-      text-align: center;
-      padding-top: 100px;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    h1 {
-      color: white;
-      font-size: 50px;
+    body{
+      background:#eef6ff;
+      font-family: "Trebuchet MS", sans-serif;
+      color:#2f4f6f;
+      padding:30px;
     }
 
-    p {
-      color: white;
-      font-size: 20px;
+    .container{
+      max-width:1100px;
+      margin:auto;
+      border:4px solid #9fc8f7;
+      background:white;
+      padding:20px;
+      border-radius:25px;
+      box-shadow:0 0 20px rgba(120,160,255,0.2);
     }
+
+    /* BARRA SUPERIOR */
+
+    .topbar{
+      border:3px solid #a9d0ff;
+      border-radius:40px;
+      padding:12px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:25px;
+      background:#f7fbff;
+    }
+
+    .search{
+      color:#7aa8d8;
+      font-size:18px;
+    }
+
+    .arrows{
+      font-size:25px;
+      color:#7aa8d8;
+    }
+
+    /* PERFIL */
+
+    .profile{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:20px;
+      margin-bottom:20px;
+    }
+
+    .card{
+      border:3px solid #b8d8ff;
+      padding:15px;
+      border-radius:20px;
+      background:#f8fcff;
+    }
+
+    .title{
+      font-size:45px;
+      color:#6fa7e9;
+      font-weight:bold;
+      line-height:45px;
+    }
+
+    .subtitle{
+      margin-top:10px;
+      font-size:18px;
+    }
+
+    .home-btn{
+      margin-top:20px;
+      background:#a7d2ff;
+      color:white;
+      padding:10px;
+      border:none;
+      border-radius:15px;
+      width:100%;
+      font-size:17px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .home-btn:hover{
+      background:#7fbaf7;
+    }
+
+    /* BOTONES */
+
+    .menu{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .menu button{
+      flex:1;
+      min-width:140px;
+      background:#c9e4ff;
+      border:none;
+      padding:12px;
+      border-radius:15px;
+      color:#35628d;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .menu button:hover{
+      background:#9fd0ff;
+      transform:scale(1.03);
+    }
+
+    /* CAJAS */
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .section-title{
+      background:#abd5ff;
+      color:white;
+      padding:10px;
+      border-radius:10px;
+      margin-bottom:10px;
+      font-weight:bold;
+    }
+
+    ul{
+      list-style:none;
+    }
+
+    li{
+      padding:8px;
+      border-bottom:1px solid #dceeff;
+    }
+
+    /* BLOG */
+
+    .blog-post{
+      background:#f4faff;
+      border:2px solid #cfe7ff;
+      padding:15px;
+      border-radius:15px;
+      margin-top:15px;
+    }
+
+    .blog-post h3{
+      margin-bottom:8px;
+      color:#4e83b8;
+    }
+
+    /* FOOTER */
+
+    .footer{
+      margin-top:30px;
+      text-align:center;
+      color:#7a9dbd;
+      font-size:14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:800px){
+
+      .profile{
+        grid-template-columns:1fr;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .title{
+        font-size:35px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
-  <h1>Hola mundo 🌸</h1>
-  <p>Mi web ya está viva en internet</p>
+
+  <div class="container">
+
+    <!-- BARRA -->
+
+    <div class="topbar">
+      <div class="search">🔎 Search . . .</div>
+      <div class="arrows">❮ ❯</div>
+    </div>
+
+    <!-- PERFIL -->
+
+    <div class="profile">
+
+      <div class="card">
+
+        <div class="title">
+          NANNO<br> & TAE
+        </div>
+
+        <div class="subtitle">
+          she/her │ estudiante <br>
+          mini blog azul marino 🌊
+        </div>
+
+        <button class="home-btn">
+          HOME
+        </button>
+
+        <div class="menu">
+          <button>Sobre mí</button>
+          <button>Mi bot</button>
+          <button>Galería</button>
+          <button>Música</button>
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <img 
+        src="https://i.pinimg.com/736x/8a/55/89/8a5589c4b33eb0d5b87fbc3ea5f17c8c.jpg"
+        width="100%"
+        style="border-radius:20px;">
+
+      </div>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <div class="grid">
+
+      <!-- IZQUIERDA -->
+
+      <div class="card">
+
+        <div class="section-title">
+          Wishlist
+        </div>
+
+        <ul>
+          <li>Terminar el diseño del bot</li>
+          <li>Aprender más HTML y CSS</li>
+          <li>Subir dibujos nuevos</li>
+          <li>Crear una página aesthetic</li>
+          <li>Tener dominio propio</li>
+        </ul>
+
+      </div>
+
+      <!-- DERECHA -->
+
+      <div class="card">
+
+        <div class="section-title">
+          Actividad
+        </div>
+
+        <ul>
+          <li>🌊 Editando el blog</li>
+          <li>💬 Mejorando a Nanno</li>
+          <li>🎧 Escuchando música</li>
+          <li>🖌️ Dibujando personajes</li>
+          <li>📱 Haciendo pruebas nuevas</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- BLOG -->
+
+    <div class="card" style="margin-top:20px;">
+
+      <div class="section-title">
+        Mini Blog
+      </div>
+
+      <div class="blog-post">
+        <h3>Primer post</h3>
+
+        <p>
+          Estoy aprendiendo HTML y CSS para hacer una web
+          aesthetic azul marina. Honestamente, el ser humano
+          inventó programar solo para sufrir alineando cajas,
+          pero queda bonito cuando funciona.
+        </p>
+      </div>
+
+      <div class="blog-post">
+        <h3>Nanno IA</h3>
+
+        <p>
+          Mi bot todavía sigue en desarrollo.
+          Estoy agregándole respuestas más naturales,
+          mejores comandos y una estética más limpia.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      made with sueño, café y paciencia rota
+    </div>
+
+  </div>
+
 </body>
 </html>
