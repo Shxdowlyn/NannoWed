@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenido</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    animation:mostrar 9s linear forwards;
+}
+
+#img2{
+    animation-delay:3s;
+}
+
+#img3{
+    animation-delay:6s;
+}
+
+@keyframes mostrar{
+    0%{opacity:0;}
+    8%{opacity:1;}
+    92%{opacity:1;}
+    100%{opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<img src="img1.jpg">
+<img src="img2.jpg" id="img2">
+<img src="img3.jpg" id="img3">
+
+<script>
+setTimeout(()=>{
+    location.href="index.html";
+},9000);
+</script>
+
+</body>
+</html>
