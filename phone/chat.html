@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chat</title>
+
+<link rel="stylesheet" href="css/app.css">
+
+<style>
+
+body{
+margin:0;
+background:#ffeaf6;
+font-family:Verdana,sans-serif;
+height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+.header{
+
+height:70px;
+
+background:linear-gradient(90deg,#ff8ec7,#f6a8ff);
+
+display:flex;
+
+align-items:center;
+
+padding:15px;
+
+color:white;
+
+font-weight:bold;
+
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.avatar{
+
+width:42px;
+height:42px;
+
+border-radius:50%;
+
+background:white;
+
+margin-right:10px;
+
+}
+
+.chat{
+
+flex:1;
+
+padding:15px;
+
+overflow:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.bot,.me{
+
+padding:12px 16px;
+
+border-radius:18px;
+
+max-width:75%;
+
+animation:show .25s;
+
+}
+
+.bot{
+
+background:white;
+
+align-self:flex-start;
+
+}
+
+.me{
+
+background:#ffb6dc;
+
+color:#333;
+
+align-self:flex-end;
+
+}
+
+.bottom{
+
+display:flex;
+
+gap:10px;
+
+padding:15px;
+
+background:white;
+
+}
+
+input{
+
+flex:1;
+
+padding:12px;
+
+border:none;
+
+border-radius:20px;
+
+background:#f3f3f3;
+
+}
+
+button{
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:20px;
+
+background:#ff8ec7;
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateY(15px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="avatar"></div>
+
+Mom 💗
+
+</div>
+
+<div class="chat" id="chat">
+
+<div class="bot">
+Hola Jade 💗
+</div>
+
+<div class="bot">
+Bienvenida a Nanno Phone.
+</div>
+
+</div>
+
+<div class="bottom">
+
+<input id="txt" placeholder="Escribe...">
+
+<button onclick="send()">
+
+Enviar
+
+</button>
+
+</div>
+
+<script>
+
+const respuestas=[
+
+"Qué bonito verte 💗",
+
+"Estoy trabajando.",
+
+"¿Quieres ver los dibujos?",
+
+"Los bots siguen creciendo.",
+
+"Me gusta este teléfono."
+
+];
+
+function send(){
+
+let t=document.getElementById("txt");
+
+if(t.value=="") return;
+
+let c=document.getElementById("chat");
+
+c.innerHTML+=`<div class="me">${t.value}</div>`;
+
+let r=respuestas[Math.floor(Math.random()*respuestas.length)];
+
+setTimeout(()=>{
+
+c.innerHTML+=`<div class="bot">${r}</div>`;
+
+c.scrollTop=c.scrollHeight;
+
+},700);
+
+t.value="";
+
+}
+
+</script>
+
+</body>
+</html>
