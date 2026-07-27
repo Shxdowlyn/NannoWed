@@ -1,0 +1,107 @@
+// ==========================
+// Hora automática
+// ==========================
+
+function actualizarHora() {
+    const ahora = new Date();
+
+    let h = ahora.getHours().toString().padStart(2, "0");
+    let m = ahora.getMinutes().toString().padStart(2, "0");
+
+    document.getElementById("hora").textContent = `${h}:${m}`;
+}
+
+actualizarHora();
+setInterval(actualizarHora, 1000);
+
+// ==========================
+// Widgets aleatorios
+// ==========================
+
+const widgets = [
+
+"img/widgets/start.png",
+"img/widgets/error.png",
+"img/widgets/love.png",
+"img/widgets/loading.png",
+"img/widgets/welcome.png",
+"img/widgets/photo1.jpg",
+"img/widgets/photo2.jpg"
+
+];
+
+const widget = document.getElementById("widget");
+
+function cambiarWidget(){
+
+widget.style.opacity="0";
+
+setTimeout(()=>{
+
+const aleatorio=Math.floor(Math.random()*widgets.length);
+
+widget.innerHTML=`<img src="${widgets[aleatorio]}">`;
+
+widget.style.opacity="1";
+
+},400);
+
+}
+
+setInterval(cambiarWidget,6000);
+
+// ==========================
+// Animación de Apps
+// ==========================
+
+document.querySelectorAll(".app").forEach(app=>{
+
+app.addEventListener("click",function(){
+
+this.style.transform="scale(.85)";
+
+setTimeout(()=>{
+
+this.style.transform="scale(1)";
+
+},150);
+
+});
+
+});
+
+// ==========================
+// Abrir y cerrar teléfono
+// ==========================
+
+function abrirPhone(){
+
+document.getElementById("overlay").style.display="flex";
+
+}
+
+function cerrarPhone(){
+
+document.getElementById("overlay").style.display="none";
+
+}
+
+// ==========================
+// Batería falsa
+// ==========================
+
+let bateria=100;
+
+setInterval(()=>{
+
+bateria--;
+
+if(bateria<=20){
+
+bateria=100;
+
+}
+
+document.querySelector(".status-icons").innerHTML=`📶 📡 🔋${bateria}%`;
+
+},30000);
