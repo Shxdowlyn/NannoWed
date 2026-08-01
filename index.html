@@ -2,75 +2,197 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NANNO & TAE</ttitle
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NANNO & TAE</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#eef8ff;padding:20px;color:#446}
-.container{max-width:900px;margin:auto;background:#fff;border:3px solid #b9d8ff;border-radius:24px;padding:18px}
-.topbar{border:2px solid #b9d8ff;border-radius:30px;padding:10px 15px;margin-bottom:20px}
-.topbar input{width:100%;border:none;outline:none;background:none;font-size:16px}
-.profile{display:grid;grid-template-columns:320px 1fr;gap:20px}
-.card{border:2px solid #cfe5ff;background:#f8fcff;border-radius:20px;padding:16px}
-.title{font-size:48px;color:#74a8df;font-weight:bold;line-height:1}
-.subtitle{margin:10px 0 20px}
-.menu a{display:block;text-decoration:none;margin:10px 0}
-.menu button{width:100%;padding:12px;border:none;border-radius:10px;background:#b7d8ff;cursor:pointer}
-.menu button:hover{background:#9ec9ff}
-img{width:100%;border-radius:15px}
-.info{margin-top:15px;padding:12px;border:2px solid #d8ebff;border-radius:12px;background:#fff}
-.footer{text-align:center;margin-top:20px;color:#789}
-@media(max-width:700px){.profile{grid-template-columns:1fr}.title{font-size:38px}}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#eef8ff;
+    padding:20px;
+    color:#446;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    border:3px solid #b9d8ff;
+    border-radius:24px;
+    padding:18px;
+}
+
+.topbar{
+    border:2px solid #b9d8ff;
+    border-radius:30px;
+    padding:10px 15px;
+    margin-bottom:20px;
+}
+
+.topbar input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:none;
+    font-size:16px;
+}
+
+.profile{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:20px;
+}
+
+.card{
+    border:2px solid #cfe5ff;
+    background:#f8fcff;
+    border-radius:20px;
+    padding:16px;
+}
+
+.title{
+    font-size:48px;
+    color:#74a8df;
+    font-weight:bold;
+    line-height:1;
+}
+
+.subtitle{
+    margin:10px 0 20px;
+}
+
+.menu a{
+    display:block;
+    text-decoration:none;
+    margin:10px 0;
+}
+
+.menu button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#b7d8ff;
+    cursor:pointer;
+}
+
+.menu button:hover{
+    background:#9ec9ff;
+}
+
+img{
+    width:100%;
+    border-radius:15px;
+}
+
+.info{
+    margin-top:15px;
+    padding:12px;
+    border:2px solid #d8ebff;
+    border-radius:12px;
+    background:#fff;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:#789;
+}
+
+@media (max-width:700px){
+    .profile{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:38px;
+    }
+}
 </style>
 </head>
+
 <body>
+
 <div class="container">
-<div class="topbar">
-<input id="searchInput" placeholder="🔍 Buscar...">
-</div>
 
-<div class="profile">
-<div class="card">
-<div class="title">NANNO<br>& TAE</div>
-<div class="subtitle">mini blog marina 🌊<br>bots • dibujos • caos digital</div>
+    <div class="topbar">
+        <input id="searchInput" type="text" placeholder="🔍 Buscar...">
+    </div>
 
-<div class="menu">
-<a href="about.html"><button>👤 Sobre mí</button></a>
-<a href="bots.html"><button>🤖 Mis Bots</button></a>
-<a href="art.html"><button>🎨 Dibujos</button></a>
-<a href="chat.html"><button>💬 Chat IA</button></a>
-<a href="blog.html"><button>📝 Blog</button></a>
-</div>
-</div>
+    <div class="profile">
 
-<div class="card">
-<img src="https://raw.githubusercontent.com/Shxdowlyn/Imagenes/2f8fc659cd05be24a3993b8458a5a01d02aaba29/5a21b83de5448de414f1fef65f949a85.jpg">
-<div class="info">
-<h3>Estado actual</h3><br>
-<p>☁️ Editando código.<br><br>💬 Mejorando Nanno y Tae.<br><br>🖌️ Practicando dibujo.</p>
-</div>
-</div>
-</div>
+        <div class="card">
+            <div class="title">
+                NANNO<br>& TAE
+            </div>
 
-<div class="footer">
-made with sueño, música y código que funciona por milagro
-</div>
+            <div class="subtitle">
+                mini blog marina 🌊<br>
+                bots • dibujos • caos digital
+            </div>
+
+            <div class="menu">
+                <a href="about.html"><button>👤 Sobre mí</button></a>
+                <a href="bots.html"><button>🤖 Mis Bots</button></a>
+                <a href="art.html"><button>🎨 Dibujos</button></a>
+                <a href="chat.html"><button>💬 Chat IA</button></a>
+                <a href="blog.html"><button>📝 Blog</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/Shxdowlyn/Imagenes/2f8fc659cd05be24a3993b8458a5a01d02aaba29/5a21b83de5448de414f1fef65f949a85.jpg" alt="Foto de perfil">
+
+            <div class="info">
+                <h3>Estado actual</h3>
+                <br>
+                <p>
+                    ☁️ Editando código.<br><br>
+                    💬 Mejorando Nanno y Tae.<br><br>
+                    🖌️ Practicando dibujo.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        made with sueño, música y código que funciona por milagro
+    </div>
+
 </div>
 
 <script>
-function buscarContenido(){
-const t=document.getElementById("searchInput").value.toLowerCase();
-if(t.includes("bot"))location="bots.html";
-else if(t.includes("chat")||t.includes("ia"))location="chat.html";
-else if(t.includes("pinturas")||t.includes("pinturas"))location="art.html";
-else if(t.includes("blog"))location="blog.html";
-else if(t.includes("sobre"))location="about.html";
-else alert("No encontré resultados.");
+function buscarContenido() {
+    const t = document.getElementById("searchInput").value.toLowerCase();
+
+    if (t.includes("bot")) {
+        location.href = "bots.html";
+    } else if (t.includes("chat") || t.includes("ia")) {
+        location.href = "chat.html";
+    } else if (t.includes("arte") || t.includes("dibujo") || t.includes("dibujos") || t.includes("pinturas")) {
+        location.href = "art.html";
+    } else if (t.includes("blog")) {
+        location.href = "blog.html";
+    } else if (t.includes("sobre")) {
+        location.href = "about.html";
+    } else {
+        alert("No encontré resultados.");
+    }
 }
-document.getElementById("searchInput").addEventListener("keydown",e=>{
-if(e.key==="Enter")buscarContenido();
+
+document.getElementById("searchInput").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        buscarContenido();
+    }
 });
 </script>
+
 </body>
 </html>
